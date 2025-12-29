@@ -26,7 +26,8 @@ CREATE TABLE IF NOT EXISTS admin_users (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Insert default admin user (admin:admin)
-INSERT INTO admin_users (username, password) VALUES ('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
+-- IMPORTANT: Change this password immediately after installation!
+INSERT INTO admin_users (username, password) VALUES ('admin', '$2y$10$uc.UVdewEcbJsquhKde1LuA3rEQeIVGjqFztuKnA8d2vU0BrvvCQq');
 
 -- Insert products data
 -- 1 - PORÇÕES EXTRAS

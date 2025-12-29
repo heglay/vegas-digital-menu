@@ -40,7 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: /painel/index.php');
             exit;
         } else {
-            $error = 'Erro ao adicionar produto: ' . $conn->error;
+            // Log the actual error for debugging
+            error_log('Database error in produto_add.php: ' . $conn->error);
+            $error = 'Erro ao adicionar produto. Por favor, tente novamente.';
         }
         
         $stmt->close();

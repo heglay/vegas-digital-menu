@@ -48,7 +48,9 @@ if ($stmt->execute()) {
     $_SESSION['message'] = 'Produto "' . $product['nome'] . '" excluído com sucesso!';
     $_SESSION['message_type'] = 'success';
 } else {
-    $_SESSION['message'] = 'Erro ao excluir produto: ' . $conn->error;
+    // Log the actual error for debugging
+    error_log('Database error in produto_delete.php: ' . $conn->error);
+    $_SESSION['message'] = 'Erro ao excluir produto. Por favor, tente novamente.';
     $_SESSION['message_type'] = 'error';
 }
 

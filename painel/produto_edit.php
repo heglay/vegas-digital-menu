@@ -67,7 +67,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: /painel/index.php');
             exit;
         } else {
-            $error = 'Erro ao atualizar produto: ' . $conn->error;
+            // Log the actual error for debugging
+            error_log('Database error in produto_edit.php: ' . $conn->error);
+            $error = 'Erro ao atualizar produto. Por favor, tente novamente.';
         }
         
         $stmt->close();
