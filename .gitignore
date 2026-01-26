@@ -1,0 +1,50 @@
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Environment files (should be configured per installation)
+.env
+
+# Logs
+*.log
+error_log
+
+# Thumbnails and cache
+Thumbs.db
+.cache/
+
+# Backup files
+*.sql.backup
+*.sql.bak
+backup/
+
+# Uploaded files (if implementing file upload later)
+uploads/
+assets/images/products/
+
+# Composer (if used in future)
+vendor/
+composer.lock
+
+# NPM (if used in future)
+node_modules/
+package-lock.json
+
+# OS generated files
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Testing and preview files
+preview*.html
+validate.php
